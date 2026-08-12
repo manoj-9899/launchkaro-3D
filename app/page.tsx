@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+
 import { AuditCta } from '@/components/site/audit-cta'
 import { Footer } from '@/components/site/footer'
 import { Header } from '@/components/site/header'
@@ -6,6 +8,15 @@ import { Hero } from '@/components/home/hero'
 import { Problem } from '@/components/home/problem'
 import { ProcessOverview } from '@/components/home/process-overview'
 import { ServicesOverview } from '@/components/home/services-overview'
+
+export const metadata: Metadata = {
+  title: 'Website Design in Latur | LaunchKaro Maharashtra',
+  description:
+    'High-converting mobile websites and Google presence for restaurants, hotels, salons, and businesses across Maharashtra. Based in Latur.',
+  alternates: {
+    canonical: '/',
+  },
+}
 
 export default function Page() {
   return (

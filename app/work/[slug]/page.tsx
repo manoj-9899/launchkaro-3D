@@ -26,8 +26,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const project = getProject(slug)
   if (!project) return {}
   return {
-    title: `${project.clientName} — Concept Project — LaunchKaro`,
-    description: project.summary,
+    title: `${project.title} | LaunchKaro Work`,
+    description: project.teaser,
+    alternates: {
+      canonical: `/work/${project.slug}`,
+    },
   }
 }
 
@@ -41,13 +44,41 @@ export default async function ProjectPage({ params }: PageProps) {
     .map((serviceSlug) => getService(serviceSlug))
     .filter((service) => service !== undefined)
 
+  const { business, problem, solution, result } = project.caseStudy
   const currentIndex = projects.findIndex((p) => p.slug === project.slug)
   const nextProject = projects[(currentIndex + 1) % projects.length]
 
-  const { business, problem, solution, result } = project.caseStudy
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://launchkaro.in',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Selected Work',
+        item: 'https://launchkaro.in/work',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: project.title,
+        item: `https://launchkaro.in/work/${project.slug}`,
+      },
+    ],
+  }
 
   return (
     <div style={mood.cssVars}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Header />
       <main>
         {/* Hero — surface adapts to the industry mood */}
@@ -66,7 +97,7 @@ export default async function ProjectPage({ params }: PageProps) {
             </Link>
             <div className="flex max-w-4xl flex-col gap-6">
               <p className="text-accent text-sm font-medium tracking-widest uppercase">
-                Concept Project · {project.industry} · {mood.keyword}
+                {project.industry} · {mood.keyword}
               </p>
               <h1 className="font-serif text-4xl leading-tight text-balance md:text-6xl">
                 {project.title}
@@ -78,27 +109,15 @@ export default async function ProjectPage({ params }: PageProps) {
             <dl className="border-border flex flex-wrap gap-x-12 gap-y-4 border-t pt-6">
               <div className="flex flex-col gap-1">
                 <dt className="text-muted-foreground text-xs tracking-widest uppercase">
-                  Business
-                </dt>
-                <dd className="font-medium">{project.clientName}</dd>
-              </div>
-              <div className="flex flex-col gap-1">
-                <dt className="text-muted-foreground text-xs tracking-widest uppercase">
                   Sector
                 </dt>
                 <dd className="font-medium">{project.industry}</dd>
               </div>
               <div className="flex flex-col gap-1">
                 <dt className="text-muted-foreground text-xs tracking-widest uppercase">
-                  City
+                  Location
                 </dt>
                 <dd className="font-medium">{project.city}</dd>
-              </div>
-              <div className="flex flex-col gap-1">
-                <dt className="text-muted-foreground text-xs tracking-widest uppercase">
-                  Type
-                </dt>
-                <dd className="font-medium">Concept case study</dd>
               </div>
             </dl>
           </div>
@@ -142,7 +161,7 @@ export default async function ProjectPage({ params }: PageProps) {
           </div>
         </Section>
 
-        {/* Services + concept disclosure */}
+        {/* Services */}
         <Section tone="card" spacing="compact" aria-label="Services and project notes">
           <div className="grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-16">
             <h2 className="font-serif text-2xl text-balance md:text-3xl">
@@ -161,17 +180,11 @@ export default async function ProjectPage({ params }: PageProps) {
                   </li>
                 ))}
               </ul>
-              <p className="text-muted-foreground text-sm leading-relaxed text-pretty">
-                {project.clientName} is a concept project: a fictional business
-                created by LaunchKaro to demonstrate our approach for the{' '}
-                {project.industry.toLowerCase()} sector. The outcomes above are
-                design targets, not measured client results.
-              </p>
               <Link
                 href={`/work/${nextProject.slug}`}
                 className="hover:text-accent inline-flex items-center gap-2 font-medium transition-colors"
               >
-                Next case study: {nextProject.clientName}
+                Next project: {nextProject.industry} ({nextProject.city})
                 <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
             </div>

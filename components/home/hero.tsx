@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { Section } from '@/components/site/section'
-import { site } from '@/lib/content/site'
+import { getWhatsAppHref, site } from '@/lib/content/site'
 
 /**
  * Home hero — leads with the business outcome (more bookings and
@@ -12,25 +12,35 @@ import { site } from '@/lib/content/site'
  */
 export function Hero() {
   return (
-    <Section spacing="spacious" aria-label="Introduction">
+    <Section
+      spacing="default"
+      className="min-h-[calc(100svh-4rem)] min-h-[calc(100vh-4rem)] md:min-h-0 flex flex-col justify-center py-8 sm:py-12 md:py-20"
+      aria-label="Introduction"
+    >
       <div className="grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr] md:gap-14 lg:gap-20">
-        <div className="flex flex-col gap-6">
-          <p className="text-accent text-sm font-medium tracking-widest uppercase">
+        <div className="flex flex-col gap-5 sm:gap-6">
+          <p className="text-accent text-xs sm:text-sm font-medium tracking-wider uppercase">
             For hotels, restaurants, venues, institutes, salons &amp; jewellers
           </p>
-          <h1 className="font-serif text-4xl leading-tight text-balance md:text-6xl xl:text-7xl">
-            More bookings. More enquiries. A website that finally earns its
-            keep.
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl xl:text-6xl leading-[1.15] text-balance">
+            Turn online interest into bookings and enquiries.
           </h1>
-          <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed text-pretty">
-            {'Your customers judge your business on their phones before they ever call. We craft premium websites for Indian businesses that turn that first look into a booking.'}
+          <p className="text-muted-foreground max-w-2xl text-base sm:text-lg leading-relaxed text-pretty">
+            We craft high-converting websites for Indian hospitality, retail, and service businesses.
           </p>
           <div className="mt-2 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button
               variant="accent"
               size="xl"
+              className="w-full sm:w-auto"
               nativeButton={false}
-              render={<Link href={site.ctas.primary.href} />}
+              render={
+                <a
+                  href={getWhatsAppHref()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              }
             >
               {site.ctas.primary.label}
               <ArrowRight data-icon="inline-end" />
@@ -38,24 +48,25 @@ export function Hero() {
             <Button
               variant="outline"
               size="xl"
+              className="w-full sm:w-auto"
               nativeButton={false}
               render={<Link href={site.ctas.secondary.href} />}
             >
               {site.ctas.secondary.label}
             </Button>
           </div>
-          <p className="text-muted-foreground text-sm">
+          <p className="hidden sm:block text-muted-foreground text-sm">
             {site.ctas.audit.note}
           </p>
         </div>
-        <div className="relative aspect-4/5 overflow-hidden rounded-2xl md:aspect-3/4">
+        <div className="hidden md:block relative aspect-4/3 w-full max-h-[480px] overflow-hidden rounded-2xl">
           <Image
             src="/images/hero-hospitality.png"
             alt="Warmly lit boutique Indian restaurant interior with brass lamps and linen-dressed tables"
             fill
             priority
             sizes="(min-width: 768px) 40vw, 100vw"
-            className="object-cover"
+            className="object-cover object-center"
           />
         </div>
       </div>

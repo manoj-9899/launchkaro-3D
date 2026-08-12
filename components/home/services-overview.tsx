@@ -14,26 +14,21 @@ export function ServicesOverview() {
     <Section aria-label="Services">
       <SectionHeading
         eyebrow="What we do"
-        title="Everything your business needs to win customers online"
-        description="Four services, one goal: turning the people who find you into the people who book you."
+        title="Everything needed to win customers online"
+        description="Four focused services engineered to convert visitors into direct bookings."
       />
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {services.map((service) => (
           <Link
             key={service.slug}
             href={`/services#${service.slug}`}
-            className="group bg-card border-border focus-visible:ring-ring/50 flex flex-col gap-3 rounded-xl border p-6 transition-colors hover:border-accent focus-visible:ring-3 focus-visible:outline-none md:p-8"
+            className="group bg-card border-border focus-visible:ring-ring/50 flex flex-col gap-4 rounded-xl border p-6 transition-colors hover:border-accent focus-visible:ring-3 focus-visible:outline-none md:p-8"
           >
             <h3 className="font-serif text-2xl text-balance">{service.title}</h3>
             <p className="text-muted-foreground leading-relaxed text-pretty">
-              {service.summary}
+              {service.teaser}
             </p>
-            <p className="text-muted-foreground mt-auto pt-2 text-sm">
-              {'For '}
-              {service.industries.slice(0, 3).join(', ').toLowerCase()}
-              {service.industries.length > 3 ? ' & more' : ''}
-            </p>
-            <span className="text-foreground inline-flex items-center gap-1 text-sm font-medium">
+            <span className="text-foreground mt-auto inline-flex items-center gap-1 text-sm font-medium pt-2">
               Learn more
               <ArrowRight
                 className="size-4 transition-transform group-hover:translate-x-0.5"

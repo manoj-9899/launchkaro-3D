@@ -6,9 +6,12 @@ import { Header } from '@/components/site/header'
 import { Section } from '@/components/site/section'
 
 export const metadata: Metadata = {
-  title: 'Free Website Audit — LaunchKaro',
+  title: 'Free Website Audit in Maharashtra | LaunchKaro',
   description:
-    'Get a free, plain-language review of how your business shows up on Google, on mobile, and against your competitors. No jargon, no obligation. We reply on WhatsApp within 48 hours.',
+    'Free PDF website audit for businesses in Maharashtra. Mobile speed, Google rank, and 3 priority fixes delivered on WhatsApp.',
+  alternates: {
+    canonical: '/audit',
+  },
 }
 
 const whatWeCheck = [

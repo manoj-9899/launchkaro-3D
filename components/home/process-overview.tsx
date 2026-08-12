@@ -15,8 +15,8 @@ export function ProcessOverview() {
     <Section id="process" aria-label={process.eyebrow} className="scroll-mt-20">
       <SectionHeading
         eyebrow={process.eyebrow}
-        title={process.title}
-        description={process.description}
+        title={process.homeTitle}
+        description={process.homeDescription}
       />
       <ol className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
         {process.steps.map((step, index) => (
@@ -29,7 +29,7 @@ export function ProcessOverview() {
             </span>
             <h3 className="font-serif text-xl text-balance">{step.title}</h3>
             <p className="text-muted-foreground leading-relaxed text-pretty">
-              {step.deliverable}
+              {step.teaser}
             </p>
           </li>
         ))}

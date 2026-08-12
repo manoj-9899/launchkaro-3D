@@ -16,11 +16,11 @@ export function FeaturedProjects() {
   const featured = getFeaturedProjects().slice(0, 4)
 
   return (
-    <Section tone="card" aria-label="Featured projects">
+    <Section tone="card" aria-label="Selected Work">
       <SectionHeading
-        eyebrow="Our work"
-        title="Websites built to bring customers, not just compliments"
-        description="Every project we take on is measured by one thing: did it bring the business more enquiries?"
+        eyebrow="Selected Work"
+        title="Websites built for real business outcomes"
+        description="Every project is engineered to generate qualified enquiries."
       />
       {featured.length > 0 ? (
         <>
@@ -29,7 +29,7 @@ export function FeaturedProjects() {
               <Link
                 key={project.slug}
                 href={`/work/${project.slug}`}
-                className="group focus-visible:ring-ring/50 flex flex-col gap-4 rounded-xl focus-visible:ring-3 focus-visible:outline-none"
+                className="group focus-visible:ring-ring/50 flex flex-col gap-3 rounded-xl focus-visible:ring-3 focus-visible:outline-none"
               >
                 <div className="relative aspect-3/2 overflow-hidden rounded-xl">
                   <Image
@@ -40,17 +40,15 @@ export function FeaturedProjects() {
                     className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                   />
                 </div>
-                <div className="flex flex-col gap-1.5">
-                  <p className="text-muted-foreground text-sm">
-                    {project.industry}
-                    {' · '}
-                    {project.city}
+                <div className="flex flex-col gap-1">
+                  <p className="text-muted-foreground text-xs font-medium tracking-wider uppercase">
+                    {project.industry} · {project.city}
                   </p>
-                  <h3 className="font-serif text-xl text-balance">
+                  <h3 className="font-serif text-lg leading-snug text-balance">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed text-pretty">
-                    {project.summary}
+                  <p className="text-muted-foreground text-sm leading-relaxed text-pretty">
+                    {project.teaser}
                   </p>
                 </div>
               </Link>

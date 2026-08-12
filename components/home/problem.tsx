@@ -7,23 +7,23 @@ import { site } from '@/lib/content/site'
 const failures = [
   {
     icon: Smartphone,
-    title: 'It looks cheap on a phone',
-    body: 'Most of your customers only ever see your site on a phone. If it looks like a template from 2015, they assume the business is the same.',
+    title: 'Looks outdated on phones',
+    body: 'If your site breaks on mobile, customers assume your service is the same.',
   },
   {
     icon: Search,
-    title: "Google can't find it",
-    body: 'When someone nearby searches for what you do, your competitors show up first — and they get the call that should have been yours.',
+    title: "Hidden on Google search",
+    body: 'Nearby searchers find competitors first and make calls elsewhere.',
   },
   {
     icon: PhoneOff,
-    title: 'There is no easy next step',
-    body: 'No booking button, no WhatsApp, a contact form nobody reads. Interested visitors leave because reaching you takes effort.',
+    title: 'No clear action button',
+    body: 'Missing WhatsApp links and booking options drive visitors away.',
   },
   {
     icon: TimerOff,
-    title: 'It was launched and forgotten',
-    body: 'Old menus, last season\u2019s prices, broken photos. A stale site quietly tells customers you\u2019ve stopped caring.',
+    title: 'Stale and forgotten',
+    body: 'Outdated menus and old photos signal a neglected business.',
   },
 ]
 
@@ -36,8 +36,8 @@ export function Problem() {
     <Section tone="card" aria-label="Why most business websites fail">
       <SectionHeading
         eyebrow="The problem"
-        title="Most business websites are brochures nobody reads"
-        description="A website should be your hardest-working salesperson. For most Indian businesses, it fails at that job for the same four reasons."
+        title="Most business websites fail to bring customers"
+        description="Four common flaws prevent visitors from converting into bookings."
       />
       <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {failures.map((failure) => (

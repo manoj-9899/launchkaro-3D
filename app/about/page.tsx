@@ -6,46 +6,64 @@ import { Header } from '@/components/site/header'
 import { Section, SectionHeading } from '@/components/site/section'
 
 export const metadata: Metadata = {
-  title: 'About — LaunchKaro',
+  title: 'About Solo Web Designer in Latur | LaunchKaro',
   description:
-    'LaunchKaro is a boutique web studio for Indian businesses. Our philosophy, how we work differently, and why small teams build better websites.',
+    'Solo web designer based in Latur building high-converting websites for businesses across Maharashtra. Direct WhatsApp support.',
+  alternates: {
+    canonical: '/about',
+  },
 }
 
 const beliefs = [
   {
     title: 'Your website should earn its keep',
-    body: "A website is not a formality or a digital visiting card. It's the first employee your customers meet — and it should be measured the same way: does it bring in enquiries, bookings, and walk-ins? If it doesn't, it's not done.",
+    body: 'A website is an active salesperson, not a static online brochure. Every design decision I make focuses on generating customer enquiries, bookings, and walk-ins.',
   },
   {
-    title: 'Premium is a standard, not a price tag',
-    body: 'Indian customers judge a business in seconds, on a phone, often on a patchy network. Premium means the site loads fast, reads clearly, looks trustworthy, and makes the next step obvious. Nothing decorative survives if it slows that down.',
+    title: 'Direct line to the builder',
+    body: 'You talk directly to me on WhatsApp. No account managers, no ticket queues, and no game of phone tag between sales reps and developers.',
   },
   {
-    title: 'Plain language, always',
-    body: "You shouldn't need to learn our vocabulary to work with us. We explain everything — what we're building, why, and what it costs — in the language you run your business in. If we can't explain a recommendation simply, we don't make it.",
+    title: 'Built for local browsing habits',
+    body: 'Fast loading on mobile networks, clear typography, and direct WhatsApp actions built specifically for how local customers browse and make decisions.',
   },
   {
-    title: 'Built for how India actually browses',
-    body: "Mobile-first is not a buzzword here — it's the reality of your customers. WhatsApp is where they want to talk. Google Maps is where they find you. We build for those habits, not for design awards.",
+    title: 'Zero agency overhead',
+    body: 'As a solo studio, I do not charge for fancy office space or executive layers. You pay strictly for high-converting design, speed, and execution.',
+  },
+]
+
+const soloAdvantages = [
+  {
+    title: 'Senior Execution Only',
+    body: 'I personally handle your website design, messaging structure, and technical build from start to finish.',
+  },
+  {
+    title: 'Fast Direct Support',
+    body: 'Need a menu update or seasonal offer published? Message me on WhatsApp and it goes live without waiting in an agency queue.',
+  },
+  {
+    title: 'Focused Client Intake',
+    body: 'I deliberately limit the number of active projects I take on to ensure your business gets dedicated focus.',
   },
 ]
 
 const differences = [
   {
-    title: 'You talk to the people doing the work',
-    body: 'No account managers, no handoffs, no "let me check with the team." The person who understands your business is the person building your site — and you can reach them on WhatsApp.',
+    title: 'Direct WhatsApp Line',
+    body: 'Reach me directly whenever you have a question or need an update.',
   },
   {
-    title: 'Few projects, taken seriously',
-    body: "We deliberately keep our project load small. That's the trade a boutique studio makes: fewer clients, more attention. Your project is never the small one in the queue.",
+    title: 'Selective Project Intake',
+    body: 'I limit project load so every site gets my full personal attention.',
   },
   {
-    title: 'Sector focus, not general practice',
-    body: "We work with hospitality, education, and retail businesses — hotels, restaurants, wedding venues, coaching institutes, salons, jewellers. We know what a room enquiry, a batch registration, and a showroom visit are worth, so we don't start from zero on your business.",
+    title: 'Sector-Focused Design',
+    body: 'Layouts built around room bookings, table reservations, and lead forms.',
   },
   {
-    title: 'We stay after launch',
-    body: "Most websites die of neglect, not bad design. Our care plans exist because a site that isn't updated stops working. We'd rather be your long-term web team than a vendor you never hear from again.",
+    title: 'Dedicated Care & Updates',
+    body: 'Optional ongoing support to keep your content and offers fresh year-round.',
   },
 ]
 
@@ -60,24 +78,19 @@ export default function AboutPage() {
               About LaunchKaro
             </p>
             <h1 className="font-serif text-4xl leading-tight text-balance md:text-6xl">
-              A small studio, on purpose
+              One designer, direct answers, zero agency bloat
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed text-pretty">
-              LaunchKaro is a boutique web studio for Indian businesses — the
-              hotels, restaurants, wedding venues, coaching institutes, salons,
-              and jewellers that are excellent at what they do but undersold by
-              how they look online. We&apos;re small, we&apos;re deliberate
-              about staying small, and we believe that&apos;s exactly why our
-              work is better.
+              I run LaunchKaro as a solo web designer based in Latur, working with hospitality, retail, and service businesses across Maharashtra. When you work with LaunchKaro, you deal directly with the person who designs and builds your site.
             </p>
           </div>
         </Section>
 
-        <Section tone="card" aria-label="Our philosophy">
+        <Section tone="card" aria-label="My philosophy">
           <SectionHeading
-            eyebrow="What we believe"
-            title="Websites are business tools, not brochures"
-            description="Everything we build follows four convictions. If a decision doesn't serve one of these, we don't make it."
+            eyebrow="My approach"
+            title="Websites are business tools, not decorative brochures"
+            description="Four principles that guide every site I design and build."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {beliefs.map((belief) => (
@@ -96,53 +109,46 @@ export default function AboutPage() {
           </div>
         </Section>
 
-        <Section aria-label="Why a boutique studio">
-          <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
-            <div className="flex flex-col gap-6">
+        <Section aria-label="Why a solo studio">
+          <div className="flex flex-col gap-10">
+            <div className="flex max-w-2xl flex-col gap-4">
               <p className="text-accent text-sm font-medium tracking-widest uppercase">
-                Why boutique
+                Why working directly matters
               </p>
               <h2 className="font-serif text-3xl leading-tight text-balance md:text-5xl">
-                The case for a small studio
+                The advantage of working directly with your builder
               </h2>
             </div>
-            <div className="flex flex-col gap-6">
-              <p className="leading-relaxed text-pretty">
-                Most Indian SMBs get their website from one of two places: a
-                freelancer who disappears after launch, or a large agency where
-                your project is handled by whoever is free that week. Both can
-                produce a website. Neither is built to care whether it works.
-              </p>
-              <p className="text-muted-foreground leading-relaxed text-pretty">
-                A boutique studio is the third option. Small enough that the
-                people you talk to are the people doing the work. Focused
-                enough to know your sector instead of learning it on your
-                budget. And invested enough to stay after launch, because our
-                reputation is built on a handful of businesses doing well — not
-                on volume.
-              </p>
-              <p className="text-muted-foreground leading-relaxed text-pretty">
-                We won&apos;t pretend to be bigger than we are. No invented
-                team pages, no borrowed logos, no &quot;offices&quot; in five
-                cities. What you see is what you work with — and we&apos;d
-                rather earn trust through the work than through claims.
-              </p>
+            <div className="grid gap-6 md:grid-cols-3">
+              {soloAdvantages.map((reason) => (
+                <div
+                  key={reason.title}
+                  className="bg-card border-border flex flex-col gap-3 rounded-xl border p-6 md:p-8"
+                >
+                  <h3 className="font-serif text-xl text-balance">
+                    {reason.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed text-pretty">
+                    {reason.body}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </Section>
 
-        <Section tone="card" aria-label="How we work differently">
+        <Section tone="card" aria-label="How I work">
           <SectionHeading
-            eyebrow="How we're different"
-            title="What working with LaunchKaro actually looks like"
+            eyebrow="How I work"
+            title="What working with LaunchKaro looks like"
           />
-          <div className="mt-10 grid gap-x-12 gap-y-10 md:grid-cols-2">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {differences.map((item) => (
-              <div key={item.title} className="flex flex-col gap-3">
-                <h3 className="font-serif text-2xl text-balance">
+              <div key={item.title} className="flex flex-col gap-3 bg-background border-border rounded-xl border p-6">
+                <h3 className="font-serif text-xl text-balance">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-pretty">
+                <p className="text-muted-foreground text-sm leading-relaxed text-pretty">
                   {item.body}
                 </p>
               </div>
@@ -151,16 +157,12 @@ export default function AboutPage() {
         </Section>
 
         <Section aria-label="An honest note">
-          <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
+          <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
             <p className="text-accent text-sm font-medium tracking-widest uppercase">
               An honest note
             </p>
             <p className="font-serif text-2xl leading-relaxed text-balance md:text-3xl">
-              We&apos;re a young studio. Our portfolio is concept work built to
-              show how we think, and it will fill with real client results as
-              they mature. What we can promise today is the thing that
-              doesn&apos;t need years to prove: full attention, plain answers,
-              and work we&apos;re prepared to stand behind.
+              I focus on clear communication, fast loading speeds, and websites built to bring in real customer enquiries for businesses across Maharashtra.
             </p>
           </div>
         </Section>

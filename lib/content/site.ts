@@ -11,10 +11,11 @@ export interface CtaLink {
 export interface ContactInfo {
   email: string
   phone: string
-  /** Digits only, with country code, e.g. "919876543210" */
+  /** Digits only, with country code, e.g. "918805348821" */
   whatsappNumber: string
   /** Prefilled message for WhatsApp CTAs */
   whatsappMessage: string
+  locationLine: string
   city: string
 }
 
@@ -44,9 +45,9 @@ export interface SiteContent {
 
 export const site: SiteContent = {
   name: 'LaunchKaro',
-  tagline: 'Websites that make your business look as good as it is.',
+  tagline: 'Websites engineered to bring you customers.',
   description:
-    'A boutique web studio for Indian businesses — hotels, restaurants, wedding venues, coaching institutes, salons, and jewellers. Premium design, built to bring you enquiries.',
+    'A boutique web studio crafting high-converting websites for restaurants, hotels, venues, institutes, salons, and jewellers across Maharashtra.',
   nav: [
     { label: 'Services', href: '/services' },
     { label: 'Work', href: '/work' },
@@ -60,27 +61,28 @@ export const site: SiteContent = {
     audit: {
       eyebrow: 'Free Website Audit',
       title: 'Is your website losing you customers?',
-      body: "Send us your current website — or tell us you don't have one yet. We'll review how you show up on Google, on mobile, and against your competitors, and send you a plain-language report within 48 hours. No jargon, no obligation.",
+      body: "Send us your website or business name. We'll review your Google rank, mobile speed, and local competitors and deliver a plain-language report on WhatsApp within 48 hours.",
       buttonLabel: 'Request My Free Audit',
       note: 'Takes 2 minutes. We reply on WhatsApp.',
     },
   },
   contact: {
-    email: 'hello@launchkaro.in',
-    phone: '+91 98765 43210',
-    whatsappNumber: '919876543210',
+    email: 'launchkaro.team@gmail.com',
+    phone: '+91 88053 48821',
+    whatsappNumber: '918805348821',
     whatsappMessage:
-      "Hi LaunchKaro! I'd like a free website audit for my business.",
-    city: 'Mumbai, India',
+      "Hi LaunchKaro, I'd like a free website audit for my business.",
+    locationLine: 'Based in Latur — working with businesses across Maharashtra',
+    city: 'Latur, Maharashtra',
   },
   footer: {
     blurb:
-      'LaunchKaro is a boutique web studio crafting premium websites for Indian hospitality, education, and retail businesses.',
+      'LaunchKaro is a boutique web studio crafting high-converting websites for businesses across Maharashtra.',
     legalLinks: [
-      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Privacy Policy', href: '/privacy-policy' },
       { label: 'Terms of Service', href: '/terms' },
     ],
-    craftedNote: 'Crafted with care in India',
+    craftedNote: 'Based in Latur — working with businesses across Maharashtra',
   },
 }
 

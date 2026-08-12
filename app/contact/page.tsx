@@ -10,9 +10,12 @@ import { Section } from '@/components/site/section'
 import { getWhatsAppHref, site } from '@/lib/content/site'
 
 export const metadata: Metadata = {
-  title: 'Contact — LaunchKaro',
+  title: 'Contact LaunchKaro | Web Studio in Latur',
   description:
-    'Get in touch with LaunchKaro on WhatsApp or by email. A boutique web studio for Indian hotels, restaurants, wedding venues, coaching institutes, salons, and jewellers.',
+    'Get in touch with LaunchKaro on WhatsApp or email. Website design for businesses across Maharashtra. Based in Latur.',
+  alternates: {
+    canonical: '/contact',
+  },
 }
 
 export default function ContactPage() {
@@ -44,7 +47,7 @@ export default function ContactPage() {
                   render={
                     <a
                       href={getWhatsAppHref(
-                        "Hi LaunchKaro! I'd like to talk about a website for my business.",
+                        "Hi LaunchKaro, I'd like a free website audit for my business.",
                       )}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -66,7 +69,7 @@ export default function ContactPage() {
               </div>
 
               <p className="text-muted-foreground text-sm">
-                {site.contact.phone} · {site.contact.city}
+                {site.contact.phone} · {site.contact.locationLine}
               </p>
             </div>
 

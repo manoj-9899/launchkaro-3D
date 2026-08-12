@@ -37,15 +37,6 @@ export function AuditCta({ className }: AuditCtaProps) {
             variant="accent"
             size="xl"
             nativeButton={false}
-            render={<Link href={site.ctas.primary.href} />}
-          >
-            {audit.buttonLabel}
-            <ArrowRight data-icon="inline-end" />
-          </Button>
-          <Button
-            variant="outline"
-            size="xl"
-            nativeButton={false}
             render={
               <a
                 href={getWhatsAppHref()}
@@ -55,7 +46,16 @@ export function AuditCta({ className }: AuditCtaProps) {
             }
           >
             <MessageCircle data-icon="inline-start" />
-            Chat on WhatsApp
+            {audit.buttonLabel}
+          </Button>
+          <Button
+            variant="outline"
+            size="xl"
+            nativeButton={false}
+            render={<Link href="/audit" />}
+          >
+            Use short audit form
+            <ArrowRight data-icon="inline-end" />
           </Button>
           </div>
           <p className="text-muted-foreground text-sm">{audit.note}</p>

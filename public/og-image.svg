@@ -1,0 +1,9 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#F7F4EB"/>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="#1C1917" />
+  <text x="90" y="140" font-family="Georgia, serif" font-size="32" font-weight="bold" fill="#D97706">LaunchKaro.</text>
+  <text x="90" y="240" font-family="Georgia, serif" font-size="56" font-weight="bold" fill="#F7F4EB">Website Design in Latur</text>
+  <text x="90" y="320" font-family="system-ui, sans-serif" font-size="32" fill="#D1D5DB">High-converting websites for Maharashtra businesses.</text>
+  <rect x="90" y="400" width="460" height="70" rx="12" fill="#D97706"/>
+  <text x="120" y="446" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#1C1917">Get a Free Website Audit on WhatsApp →</text>
+</svg>

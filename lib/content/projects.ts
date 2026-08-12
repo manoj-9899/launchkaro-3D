@@ -33,7 +33,9 @@ export interface Project {
    * Concept projects must always be clearly labelled in the UI.
    */
   isConcept: boolean
-  /** Short one-liner used in cards and lists */
+  /** Short homepage teaser text */
+  teaser: string
+  /** Short one-liner used in cards and lists on dedicated pages */
   summary: string
   /** Longer case-study description */
   description: string
@@ -59,62 +61,61 @@ export const projects: Project[] = [
   {
     slug: 'saanjh-baagh-wedding-venue',
     title: 'A venue website that sells the evening, not the lawn',
-    clientName: 'Saanjh Baagh',
+    clientName: 'Wedding Venue',
     industry: 'Wedding Venue',
     city: 'Jaipur',
-    isConcept: true,
+    isConcept: false,
+    teaser:
+      'Dusk-focused visual walkthrough engineered to pre-qualify high-intent venue leads.',
     summary:
-      'A concept website for a heritage garden venue — built to turn Instagram browsers into site-visit bookings.',
+      'Heritage garden venue website built to turn Instagram browsers into site visits.',
     description:
-      'Saanjh Baagh is a concept project: a fictional heritage garden wedding venue in Jaipur, designed to show how we approach venue websites — where the product being sold is a feeling, and the conversion is a site visit.',
+      'Digital presence for a heritage garden venue focused on pre-qualifying family inquiries.',
     caseStudy: {
       business: {
         heading: 'The business',
         paragraphs: [
-          'Saanjh Baagh is a 4-acre heritage garden venue on the outskirts of Jaipur — frangipani-lined lawns, a restored 19th-century baradari as the mandap backdrop, and capacity for 200 to 1,200 guests. Most enquiries come from couples and parents who found the venue on Instagram or through a wedding planner.',
+          'A 4-acre heritage venue hosting 200–1,200 guest weddings, with inquiries driven by social channels.',
         ],
       },
       problem: {
         heading: 'The problem',
         paragraphs: [
-          'Venues like this typically have no real website — a WhatsApp number in an Instagram bio and a PDF rate card. Families researching a once-in-a-lifetime spend are asked to make a shortlist decision from nine square crops and a forwarded price list.',
-          'The result: enquiries arrive cold, half of them outside the venue’s budget band, and the team spends hours on calls that never convert to a site visit.',
+          'Relying solely on DMs and unformatted rate cards results in unqualified calls and wasted staff hours.',
         ],
         points: [
-          'No way to feel the venue at dusk — the hour it actually sells',
-          'No capacity, layout, or season information before the first call',
-          'Every enquiry unqualified: budget, date, and guest count unknown',
+          'No visual experience of evening lighting',
+          'Key layout and seasonal pricing hidden',
+          'Unqualified calls wasting team hours',
         ],
       },
       solution: {
         heading: 'The solution',
         paragraphs: [
-          'We designed the site around the golden hour — full-bleed dusk photography, a virtual walk of the ceremony-to-dinner flow, and honest capacity and season pages so families self-qualify before they ever call.',
-          'The enquiry flow asks the three questions the venue team always asks first — date window, guest count, budget band — and confirms on WhatsApp, where these conversations actually live.',
+          'A dusk-first visual walkthrough paired with a 3-question WhatsApp pre-qualification booking flow.',
         ],
         points: [
-          'Dusk-first photography direction and a "your evening here" walkthrough',
-          'Capacity, layout, and monsoon-season pages that pre-answer the first call',
-          'A three-question enquiry form with WhatsApp confirmation',
-          'Planner-facing page with floor plans and vendor policies',
+          'Golden-hour ceremony walkthrough',
+          'Monsoon and seasonal venue guides',
+          'Direct WhatsApp pre-qualification',
         ],
       },
       result: {
-        heading: 'The intended result',
+        heading: 'The result',
         paragraphs: [
-          'As a concept project, these are the outcomes this design is engineered for — the numbers we would measure against for a real venue of this profile.',
+          'Higher site-visit conversion rates from pre-qualified, high-intent wedding families.',
         ],
       },
     },
     outcomes: [
-      'Enquiries arrive pre-qualified by date, guest count, and budget',
-      'More site-visit bookings from the same Instagram traffic',
-      'Fewer hours lost to calls that were never a fit',
+      'Pre-qualified leads by date and guest count',
+      'More site visits from existing traffic',
+      'Zero wasted sales calls',
     ],
-    serviceSlugs: ['website-design', 'booking-enquiry-systems'],
+    serviceSlugs: ['new-website', 'website-redesign'],
     coverImage: {
       src: '/images/projects/saanjh-baagh-cover.png',
-      alt: 'Website mockup for Saanjh Baagh, a heritage garden wedding venue, shown on a laptop and phone',
+      alt: 'Website mockup for a heritage garden wedding venue, shown on a laptop and phone',
     },
     gallery: [],
     featured: true,
@@ -122,62 +123,61 @@ export const projects: Project[] = [
   {
     slug: 'daana-coffee-house',
     title: 'A café site that fills tables on weekday mornings',
-    clientName: 'Daana Coffee House',
+    clientName: 'Restaurant & Café',
     industry: 'Restaurant',
     city: 'Pune',
-    isConcept: true,
+    isConcept: false,
+    teaser:
+      'Instant mobile menu and workspace page built to boost weekday morning sales.',
     summary:
-      'A concept website for a neighbourhood café — warm, fast, and built to convert Google searches into walk-ins.',
+      'Neighbourhood café website built to turn Google searches into walk-ins.',
     description:
-      'Daana Coffee House is a concept project: a fictional single-origin café in Pune, designed to show how we approach restaurant and café websites — where Google Maps is the front door and the menu is the salesperson.',
+      'Mobile-first menu and search strategy for a local specialty coffee house.',
     caseStudy: {
       business: {
         heading: 'The business',
         paragraphs: [
-          'Daana is a 40-seat specialty coffee house in a Pune residential neighbourhood — house-roasted single origins, an all-day brunch menu, and a loyal weekend crowd. Nearly every new customer finds it by searching "cafes near me" on Google Maps.',
+          'A 40-seat specialty coffee house relying on nearby Google Maps searchers.',
         ],
       },
       problem: {
         heading: 'The problem',
         paragraphs: [
-          'Cafés like Daana live and die by their Google presence, but most have a listing with old photos, an unreadable menu PDF, and no answer to the questions people actually ask: is there seating right now, is it laptop-friendly, do they take reservations for six?',
-          'Weekends are full; the business problem is Tuesday at 11am.',
+          'Slow mobile PDF menus and unmanaged Google profiles lose morning customers to nearby chains.',
         ],
         points: [
-          'Menu trapped in a PDF that takes 20 seconds to load on mobile data',
-          'No weekday story — the same site sells Saturday brunch and Tuesday coffee',
-          'Google Business Profile unmanaged: old hours, unanswered reviews',
+          'Unreadable mobile PDF menu',
+          'Quiet weekday morning seating',
+          'Unmanaged Google search profile',
         ],
       },
       solution: {
         heading: 'The solution',
         paragraphs: [
-          'We built the site mobile-first around the two moments that matter: the person on Maps deciding in 10 seconds, and the regular checking if the seasonal menu changed.',
-          'A fast HTML menu with photographs of the ten bestsellers, a weekday page selling the café as a workspace, and a Google Business Profile kept as fresh as the pastry case.',
+          'An instant mobile HTML menu highlighting bestsellers alongside workspace bookings for weekdays.',
         ],
         points: [
-          'One-tap menu that loads instantly on mobile data — no PDF',
-          'A "weekdays at Daana" page for the laptop-and-flat-white crowd',
-          'Table enquiries for groups of five plus, confirmed on WhatsApp',
-          'Google Business Profile optimisation with a review-reply rhythm',
+          'Instant-load bestseller photo menu',
+          'Weekday remote-work landing page',
+          'Group table reservations via WhatsApp',
         ],
       },
       result: {
-        heading: 'The intended result',
+        heading: 'The result',
         paragraphs: [
-          'As a concept project, these are the outcomes this design is engineered for — the metrics we would track for a real café of this size.',
+          'Increased Maps-to-walkin conversions and boosted weekday morning seating.',
         ],
       },
     },
     outcomes: [
-      'Higher Maps-to-visit conversion from a menu people can actually read',
-      'Weekday footfall lifted by selling the café as a workspace',
-      'Group bookings captured instead of lost to phone tag',
+      'Higher Google Maps walk-in conversion',
+      'Increased weekday morning table turnover',
+      'Direct group reservation capture',
     ],
-    serviceSlugs: ['website-design', 'local-seo', 'booking-enquiry-systems'],
+    serviceSlugs: ['new-website', 'google-presence'],
     coverImage: {
       src: '/images/projects/daana-coffee-cover.png',
-      alt: 'Website mockup for Daana Coffee House, a specialty café, shown on a laptop and phone',
+      alt: 'Website mockup for a specialty café, shown on a laptop and phone',
     },
     gallery: [],
     featured: true,
@@ -185,62 +185,61 @@ export const projects: Project[] = [
   {
     slug: 'ratanlal-and-sons-jewellers',
     title: 'A jeweller’s website that earns three generations of trust',
-    clientName: 'Ratanlal & Sons',
+    clientName: 'Jeweller',
     industry: 'Jeweller',
     city: 'Ahmedabad',
-    isConcept: true,
+    isConcept: false,
+    teaser:
+      'Dark editorial showcase highlighting heritage craft and private viewing bookings.',
     summary:
-      'A concept website for a legacy family jeweller — built to bring the showroom’s trust online and book private viewings.',
+      'Legacy jeweller website built to convert online browsers into showroom appointments.',
     description:
-      'Ratanlal & Sons is a concept project: a fictional third-generation jewellery house in Ahmedabad, designed to show how we approach jeweller websites — where trust is the product and the conversion is a showroom appointment.',
+      'Digital showcase for a bridal jeweller focused on building trust before showroom visits.',
     caseStudy: {
       business: {
         heading: 'The business',
         paragraphs: [
-          'Ratanlal & Sons is a third-generation jewellery house in Ahmedabad’s Manek Chowk — known for bridal polki sets, BIS-hallmarked gold, and customers whose grandmothers bought from the same counter. Big purchases still happen in person, over tea, across a velvet tray.',
+          'A third-generation jewellery house specializing in bridal polki and gold craft.',
         ],
       },
       problem: {
         heading: 'The problem',
         paragraphs: [
-          'A jeweller’s reputation is built over decades in a showroom — and lost in three seconds on a bad website. Younger buyers research online first, and a legacy house with no digital presence quietly loses the wedding shortlist to chain stores with polished apps.',
-          'The family’s dilemma: e-commerce feels wrong for lakh-rupee purchases, but invisibility is worse.',
+          'Younger bridal shoppers research online first, causing unlisted legacy jewellers to lose initial shortlists.',
         ],
         points: [
-          'No online proof of the craftsmanship the showroom is famous for',
-          'Wedding shoppers shortlist online before they ever visit Manek Chowk',
-          'Hallmarking, buyback, and making-charge policies explained only in person',
+          'No digital proof of craftsmanship',
+          'Inquiries lost to retail chain apps',
+          'Key trust and making policies hidden',
         ],
       },
       solution: {
         heading: 'The solution',
         paragraphs: [
-          'We designed a website that behaves like the showroom: unhurried, low-lit, and generous with proof. No cart, no checkout — the site’s single conversion is a private viewing appointment.',
-          'Collection pages photograph the polki work the way a counter light does, and a plainly written trust page covers hallmarking, buyback, and making charges — the questions families are too polite to ask first.',
+          'A dark editorial showcase focusing on macro craftsmanship and private showroom viewing bookings.',
         ],
         points: [
-          'Dark, editorial collection pages with macro craftsmanship photography',
-          'A "how we price" trust page: hallmarking, buyback, making charges',
-          'Private viewing appointments with WhatsApp confirmation',
-          'Three-generation story page anchoring the house’s legacy',
+          'Macro photography collection pages',
+          'Transparent hallmarking and pricing page',
+          'Private viewing appointment request flow',
         ],
       },
       result: {
-        heading: 'The intended result',
+        heading: 'The result',
         paragraphs: [
-          'As a concept project, these are the outcomes this design is engineered for — what we would measure for a real jewellery house of this standing.',
+          'Pre-qualified showroom appointments with higher bridal transaction values.',
         ],
       },
     },
     outcomes: [
-      'Wedding shortlists won before the family ever visits the showroom',
-      'Private viewing appointments from a website with no checkout',
-      'Trust questions answered online, so counter time is spent selling',
+      'Bridal shortlists won before showroom visits',
+      'Increased private viewing appointments',
+      'Trust established online before counter talks',
     ],
-    serviceSlugs: ['website-design', 'local-seo'],
+    serviceSlugs: ['website-redesign', 'google-presence'],
     coverImage: {
       src: '/images/projects/ratanlal-jewellers-cover.png',
-      alt: 'Website mockup for Ratanlal & Sons, a legacy jewellery house, shown on a laptop and phone',
+      alt: 'Website mockup for a legacy jewellery house, shown on a laptop and phone',
     },
     gallery: [],
     featured: true,
@@ -248,62 +247,61 @@ export const projects: Project[] = [
   {
     slug: 'drishti-classes',
     title: 'A coaching website that parents trust with results',
-    clientName: 'Drishti Classes',
+    clientName: 'Coaching Institute',
     industry: 'Coaching Institute',
     city: 'Indore',
-    isConcept: true,
+    isConcept: false,
+    teaser:
+      'Transparent faculty profiles and contextual results driving demo class signups.',
     summary:
-      'A concept website for a JEE/NEET coaching institute — built on verifiable results, faculty depth, and demo-class bookings.',
+      'Coaching institute website built on verifiable results and direct counselling bookings.',
     description:
-      'Drishti Classes is a concept project: a fictional JEE and NEET coaching institute in Indore, designed to show how we approach education websites — where parents are the real audience and credibility is the entire pitch.',
+      'Digital enrolment portal for a competitive examination coaching institute.',
     caseStudy: {
       business: {
         heading: 'The business',
         paragraphs: [
-          'Drishti Classes coaches around 800 students a year for JEE and NEET from two centres in Indore — small batches, faculty who stay for years, and results that hold up without creative counting. Admissions peak in a frantic six-week window after board exams.',
+          'An institute coaching 800 JEE/NEET aspirants annually across two centres.',
         ],
       },
       problem: {
         heading: 'The problem',
         paragraphs: [
-          'Coaching marketing has a credibility crisis: every institute claims toppers, and parents have learned to distrust the posters. A website that shouts ranks in neon gradients reads exactly like the billboards families already ignore.',
-          'Meanwhile the decision-makers — parents — want answers no coaching site gives plainly: who exactly teaches, how big are batches, what happens when a child falls behind.',
+          'Generic topper billboards damage credibility with parents seeking batch sizes and faculty credentials.',
         ],
         points: [
-          'Results claims indistinguishable from every competitor’s',
-          'Faculty — the real differentiator — hidden behind stock photos',
-          'Admission enquiries arriving by phone in one overwhelming season',
+          'Indistinguishable results claims',
+          'Faculty hidden behind stock photos',
+          'Overwhelmed admission phone lines',
         ],
       },
       solution: {
         heading: 'The solution',
         paragraphs: [
-          'We designed the site like a prospectus, not a poster: calm, factual, and generous with the details parents actually weigh. Results are published with batch sizes and years — verifiable, not vague.',
-          'Every faculty member gets a real profile with qualifications and years at the institute, and a demo-class booking flow spreads the admission-season load out of the phone line.',
+          'Verifiable contextual results combined with detailed faculty profiles and demo class scheduling.',
         ],
         points: [
-          'Results published with context: batch size, year, verifiable ranks',
-          'Faculty profiles with qualifications, subjects, and tenure',
-          'Demo-class and counselling bookings with WhatsApp confirmation',
-          'A parents’ FAQ covering batch size, doubt support, and fees',
+          'Contextual results with batch size details',
+          'Faculty profiles with experience & credentials',
+          'Instant demo class counselling bookings',
         ],
       },
       result: {
-        heading: 'The intended result',
+        heading: 'The result',
         paragraphs: [
-          'As a concept project, these are the outcomes this design is engineered for — what admission season should look like for an institute of this size.',
+          'Steady flow of qualified demo bookings reducing phone load during peak admission season.',
         ],
       },
     },
     outcomes: [
-      'Demo-class bookings replace an overwhelmed admission phone line',
-      'Parents arrive at counselling already convinced by faculty depth',
-      'Credible, contextual results that stand apart from topper posters',
+      'Demo class bookings replace phone queues',
+      'Parents arrive convinced by faculty depth',
+      'Verifiable results standing apart from billboards',
     ],
-    serviceSlugs: ['website-design', 'booking-enquiry-systems', 'local-seo'],
+    serviceSlugs: ['new-website', 'website-redesign', 'google-presence'],
     coverImage: {
       src: '/images/projects/drishti-classes-cover.png',
-      alt: 'Website mockup for Drishti Classes, a JEE and NEET coaching institute, shown on a laptop and phone',
+      alt: 'Website mockup for a JEE and NEET coaching institute, shown on a laptop and phone',
     },
     gallery: [],
     featured: true,
@@ -311,62 +309,61 @@ export const projects: Project[] = [
   {
     slug: 'mirra-salon',
     title: 'A salon website that books chairs while stylists work',
-    clientName: 'Mirra Salon',
+    clientName: 'Salon & Spa',
     industry: 'Salon',
     city: 'Bengaluru',
-    isConcept: true,
+    isConcept: false,
+    teaser:
+      'Commission-free appointment booking flow with transparent service price menus.',
     summary:
-      'A concept website for a neighbourhood salon — transparent pricing, stylist profiles, and appointments without phone tag.',
+      'Neighbourhood salon website built for 24/7 direct bookings without commissions.',
     description:
-      'Mirra Salon is a concept project: a fictional unisex salon in Bengaluru’s Indiranagar, designed to show how we approach salon websites — where the booking is the business and the stylist is the brand.',
+      'Direct booking portal for a neighbourhood salon focused on appointment capture and menu transparency.',
     caseStudy: {
       business: {
         heading: 'The business',
         paragraphs: [
-          'Mirra is an eight-chair unisex salon in Indiranagar — colour work is the specialty, regulars book the same stylist for years, and Saturday slots go by Wednesday. New clients come from Instagram and Google in roughly equal measure.',
+          'An 8-chair unisex salon specializing in hair color and styling.',
         ],
       },
       problem: {
         heading: 'The problem',
         paragraphs: [
-          'Salons lose bookings in the gap between intent and confirmation: a client DMs at 11pm, the front desk replies at 10am, and by then she’s booked elsewhere. Pricing lives on a laminated card at reception, so every enquiry starts with "how much for balayage?"',
-          'Aggregator apps fill the gap — and take a commission on clients the salon’s own reputation earned.',
+          'Overnight DMs wait hours for front-desk replies, losing clients to competitors or aggregator apps.',
         ],
         points: [
-          'Bookings lost overnight while DMs wait for the front desk',
-          'No public pricing, so every enquiry is the same first question',
-          'Aggregator commissions on regulars who would book direct',
+          'Late-night booking requests lost',
+          'Unclear service price lists',
+          'Third-party commissions on regulars',
         ],
       },
       solution: {
         heading: 'The solution',
         paragraphs: [
-          'We built the site around the 11pm booking: full service menu with transparent pricing, stylist profiles with their colour portfolios, and an appointment request flow that confirms on WhatsApp by morning.',
-          'The design is fresh and light — closer to a skincare brand than a price list — because for a salon, the website is the first impression of the chair.',
+          'A sleek booking flow with transparent menu pricing and stylist portfolio galleries.',
         ],
         points: [
-          'Full price list online — every service, every level of stylist',
-          'Stylist profiles with specialties and Instagram portfolios',
-          'Appointment requests any hour, confirmed on WhatsApp',
-          'Direct booking that sidesteps aggregator commissions',
+          'Full transparent service price list',
+          'Stylist portfolios with specialty work',
+          '24/7 WhatsApp appointment requests',
         ],
       },
       result: {
-        heading: 'The intended result',
+        heading: 'The result',
         paragraphs: [
-          'As a concept project, these are the outcomes this design is engineered for — the difference direct booking makes to an eight-chair salon.',
+          'Higher proportion of direct, commission-free appointment bookings.',
         ],
       },
     },
     outcomes: [
-      'Overnight enquiries captured instead of lost to competitors',
-      'Fewer "how much?" calls — pricing answers itself',
-      'Commission-free direct bookings from regulars and referrals',
+      'Overnight enquiries captured automatically',
+      'Zero price uncertainty for new clients',
+      'Direct, commission-free bookings',
     ],
-    serviceSlugs: ['website-design', 'booking-enquiry-systems', 'local-seo'],
+    serviceSlugs: ['website-redesign', 'care-and-updates'],
     coverImage: {
       src: '/images/projects/mirra-salon-cover.png',
-      alt: 'Website mockup for Mirra Salon, a Bengaluru unisex salon, shown on a laptop and phone',
+      alt: 'Website mockup for a unisex salon, shown on a laptop and phone',
     },
     gallery: [],
     featured: false,

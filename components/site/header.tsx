@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
-import { site } from '@/lib/content/site'
+import { getWhatsAppHref, site } from '@/lib/content/site'
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -39,7 +39,13 @@ export function Header() {
             variant="accent"
             size="lg"
             nativeButton={false}
-            render={<Link href={site.ctas.primary.href} />}
+            render={
+              <a
+                href={getWhatsAppHref()}
+                target="_blank"
+                rel="noopener noreferrer"
+              />
+            }
           >
             {site.ctas.primary.label}
           </Button>
@@ -80,7 +86,13 @@ export function Header() {
                 size="xl"
                 className="w-full"
                 nativeButton={false}
-                render={<Link href={site.ctas.primary.href} />}
+                render={
+                  <a
+                    href={getWhatsAppHref()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  />
+                }
                 onClick={() => setMenuOpen(false)}
               >
                 {site.ctas.primary.label}
